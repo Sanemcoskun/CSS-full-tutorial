@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+
+    <style>
+        body{
+            margin:0;
+        }
+        .block{
+            background-color: red;
+            width: 100px;
+            height: 30px;
+            visibility: hidden;
+        }
+        .inline{
+            background-color: green;
+            width: 100px;
+            height: 20px;
+            margin-top: 30px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+        <div class="block">block</div>
+        <div class="block">block2</div>
+        <span class="inline">inline</span>
+        <span class="inline">inline2</span>
+</body>
+</html>
+<!--display:none etiket kaybolur-->
+<!--inline etiketler özellik alabilsin ve yan yana gelebilsin diye inline block var-->
+<!--inline etiketler genişlik yükseklik vb değerler almaz-->
+<!--span inline etikettir-->
+<!--block baştan sona kaplar,inline olduğu karakter kadar kaplar-->
+<!--body varsayılan margin 8px verir. block -->
+<!--display: block, inline, inline-block, none-->

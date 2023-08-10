@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Animation</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;/*scroll yok oldu*/
+        }
+        body{
+            background-color: black;
+            display: flex;
+            /* align-items: center; */
+            /* justify-content: center; */
+            height: 100vh;/*body nin yerini artırdım*/
+        }
+        /* Css Transition Start */
+
+        /*.box{
+             width: 200px;
+            height: 200px;
+            background-color: red; */
+            /*transition-property: background-color , width;/*hangi özellikte değişiklik istiyorum
+            transition-duration: 2s;/*geçiş hızı*/
+            /*transition-timing-function: ease-in;  yavaş başlayıp hızlanıyor*/
+            /*transition-timing-function: ease-out; hızlı başlayıp yavaşlıyor*/
+            /*transition-timing-function: ease-in-out;yavaş hızlı yavaş şeklindedir*/
+            /* transition: backgorund-color 2s,width 5s ease-in ; */
+            /* transition: all 2s ease-in; hepsini bir arada yapar 
+
+        }*/
+
+        /* .box:hover{
+            background-color: turquoise;
+            width: 600px;
+        } */
+
+        /* Css Transition End */
+
+        /* Css Transform Start */
+
+        /*.box{
+             width: 200px;
+            height: 200px;
+            background-color: red; */
+            /* border-top-right-radius: 30px; */
+            /* transition: .5s transform ease-in; 
+        }*/
+
+        /*.box:hover{
+            transform: rotate(3600deg);  45 derece çevirdi*/
+            /*transform: skew(-45deg);eğri yapar*/
+            /* transform: translate(100px); sağa kaydırdı */
+            /* transform: translate(-100px); */
+            /* transform: translateX(100px);
+            transform: translateX(-100px); */
+            /* transform: translateY(100px);
+            transform: translateY(-100px); */
+            /*transform: scale(1.2);büyütme*/
+            /*transform: scale3d(0.5,1,1.3);
+        }*/
+        /* Css Transform End */
+
+
+        /* Animation Start */
+         /*.box{
+             width: 200px;
+            height: 200px;
+            background-color: red;
+            animation-name: box;/*animasyona isim verdik
+            animation-duration: 5s; */
+            /*animation-iteration-count: 4; sayfa yüklendiğinde 4 kere çalışır */
+            /*animation-iteration-count: infinite;sayfa yüklendiğinde sürekli çalışır*/
+            /*animation-fill-mode: forwards; öne doğru gider ve orda durur */
+            /*animation-delay: 2s; sayfa açıldıktan 2s sonra çalışır */
+            /* animation-direction: alternate-reverse; tam tersi yönde hareket eder*/
+            /* animation-timing-function: ease-in; */
+            /* animation: box 5s forwards 2s ease-in-out; 
+        }*/
+
+         /* @keyframes box{
+            to {
+                width: 600px;
+            }
+         } */
+        /* Animation End */
+        /* keyframes Start */
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: relative;/*top left özelliğini kullanabilmek için*/
+            animation: box 5s ease-in;
+        }
+        @keyframes box{
+            /* from{
+                top: 0;
+            left: 0;
+            }
+            to {
+                width: 600px;
+                top: 200px;
+                left: 200px;
+            } */
+            25%{
+                top: 200px;
+                left: 0px;
+            }
+            45%{
+                top: 200px;
+                left: 200px;
+            }
+            75%{
+                top: 400px;
+                left: 200px;
+            }
+            100%{
+                top: 400px;
+                left: 400px;
+            }
+        }
+        button{
+            opacity: 0;
+            animation: button 3s ease-in;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        @keyframes button{
+            to{
+                top: 200px;
+                left: 200px;
+                opacity: 1;
+            }
+        }
+
+
+        /* keyframes End*/
+    </style>
+</head>
+<body>
+    <div class="box">
+      <button>tıkla</button>
+    </div>
+</body>
+</html>

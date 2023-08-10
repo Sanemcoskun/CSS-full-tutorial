@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css position</title>
+
+<style>
+
+    /*position
+    1-static
+    2-relative => z index,absolute
+    3-absolute
+    4-fixed
+    2-sticky
+
+    */
+    body{
+        margin: 0;
+        height: 200vh;
+    }
+    .box{
+        width:200px;
+        height: 200px;
+        color: white;
+        font-size: 30px;
+    }
+    .big-wrapper{
+        padding: 10px;
+        border: 5px solid red;
+        width: 700px;
+        margin-top: 67px;
+        position: sticky;/*kutu scroll ile geliyor*/
+        top: 67px;/*sticky top özelliği ile çalışır*/
+    }
+
+    .wrapper{
+        border: 5px solid black;
+        width: 600px;
+        position: relative;
+        
+    }
+    #box1{
+        background-color: red;
+        /*kırmızı olan baskılandı kutu üste çıktı*/
+        position: relative;
+        /* z-index: 2; */
+    }
+    #box2{
+        background-color: blue;
+        bottom: 0;
+        right: 0;
+        position: absolute;/*alttaki bununla beraber yukarı gelmedi*/
+        z-index: 4; 
+    }
+    #box3{
+        background-color: purple;
+        position: relative;
+        /* top: -200px; */
+        /* z-index: 1; */
+        
+    }
+
+    header{
+        
+        padding: 0 20px;
+        background-color: greenyellow;
+        position: fixed;/*üst kısım scroll ile birlikte geliyor*/
+        top: 0;
+        width: 100%;
+        z-index: 20;
+    }
+    nav{
+        display: flex;/*logonun yanına attı*/
+        align-items: center;/*dikeyde hizaladı*/
+        justify-content: space-between;/*sona yasladı*/
+        padding: 0 40px;
+    }
+</style>
+
+</head>
+<body>
+
+    <header>
+        <nav>
+        <h2 class="logo">LOGO</h2>
+            <div class="menu-links">
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <div class="big-wrapper">
+        <div class="wrapper">
+            <div class="box" id="box1">kutu1</div>
+            <div class="box" id="box2">kutu2</div>
+            <div class="box" id="box3">kutu3</div>
+        </div>
+    </div>
+    
+
+
+</body>
+</html>
+<!--kapsayıcılara relative verirsem o kutuyu baz alır yoksa body-->
+<!--kod yukardan aşağı okunur o yüzden 2. z index yazmamız fark etmez-->

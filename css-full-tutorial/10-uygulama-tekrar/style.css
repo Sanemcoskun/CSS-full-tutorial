@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    color: white;
+    background-color: #0f0f0f;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    height: 200vh;  /*scroll için*/
+}
+
+/*HEADER START*/
+
+header{
+    border-bottom: 1px solid #717171;
+    position: fixed;
+    width: 100%;
+    z-index: 11;/*öne çıkarır*/
+    background-color: #0f0f0f;
+}
+.header-wrapper{
+    display: flex;/*3 yapı yan yana geldi header içindeki*/
+    justify-content: space-between;/*yatayda sola sağa ortaya at*/
+    align-items: center;/*dikeyde ortalandı*/
+    height: 60px;
+    padding: 0 40px;/*sağdan soldan 20px*/
+}
+header i{
+    font-size: 20px;
+}
+
+.header-left{
+    display: flex;/*yan yana hizala*/
+    align-items: center;
+}
+.header-left h3{
+    font-size: 24px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100px;
+    margin-left: 20px;
+}
+.header-center{
+    display: flex; 
+    align-items: center;
+}
+.header-search{
+    border: 1px solid #717171;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    margin-right: 12px;/*sağındaki ikonu 15px uzaklaştır*/
+
+}
+.header-search input{
+    background-color:#0f0f0f ;
+    border: none;
+    outline: none;/*tıkladığımda da gözükmesin*/
+}
+.header-search .bi-search{
+    font-size: 18px;
+    margin-right: 4px;/*sağdan uzaklaşsın*/
+    cursor: pointer;/*fareyi götürünce şekli değişir*/
+}
+.header-center .bi-mic{
+    background-color: #242424;
+    /*padding: 10px; kısa yol*/
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.header-right{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;/*yatayda aralarını açar*/
+}
+.header-right .avatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 100px;
+}
+.header-right .avatar img{
+    width: 100%;
+    border-radius: 100%;
+}
+/*HEADER END*/
+
+.content{
+    display: flex;
+    padding: 0px;
+    margin-top: 60px;/*header yüksekliği kadar*/
+   
+}
+
+/*SİDEBAR START*/
+.sidebar{
+    height: 100vh;
+    border-right: 1px solid #717171;
+    width: 100px;
+    position: fixed;
+    z-index: 10;
+    background-color: #0f0f0f;
+
+}
+.sidebar-items{
+    margin-top: 15px;
+}
+.sidebar-items a{
+   display: flex;
+   flex-direction:column;/*dikeyde hizaladı*/
+   align-items: center;
+   color: white;
+   transition: .5s ease color;/*yavaşlatma*/
+   text-decoration: none;/*etiket altındaki çizgiyi yok eder*/
+}
+.sidebar i{
+    font-size: 20px;
+}
+
+.sidebar-items span{
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.sidebar-items a:hover{
+    color: red;
+}
+
+/*SİDEBAR END*/
+
+/*VİDEOS START*/
+
+.videos{
+    margin: 15px;
+    flex: 1;/*grid yaptık tamamını kaplasın diye*/
+    margin-left: 120px;
+}
+.video-image{
+    position: relative;
+    display: flex;
+
+}
+.video-image img{
+    width: 100%;
+}
+.video-list{
+    list-style: none;
+    display: grid;
+    /*grid-template-columns: 1fr 1fr 1fr ;*/
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.video-image span{
+    position: absolute; /*eksenden çıkar*/
+    bottom: 6px;
+    right: 6px;
+    padding: 0 4px;
+    background-color: #0f0f0f;
+    font-size: 12px;
+}
+
+.video-texts{
+    display: flex;
+    row-gap: 6px;
+    flex-direction: column;/*yazıyı aşağı konumlandırır*/
+    margin-top: 4px;
+}
+
+.video-texts a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.video-texts span{
+    font-size: 12px;
+}
+/*VİDEOS END*/

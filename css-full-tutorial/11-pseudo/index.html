@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo</title>
+</head>
+
+<style>
+
+    .links a:link{
+        color: aqua;/*linkin başlangıç rengi*/
+    }
+
+    .links a:visited{
+        color: red;
+    }
+    .links a:hover{
+        color:black;
+    }
+    .links a:active{
+        color: blue;
+    }
+    /* active hoverın altında olmalı */
+
+    .show-button button{
+        display: none;/*butonun görünürlüğünü gizler*/
+    }
+
+    .show-button:hover{
+        color: red;
+    }
+
+    .show-button:hover button{
+        display: inline-block;
+    }
+    p:first-child{
+        color: blue;
+    }
+    p:last-child{
+        color:brown;
+    }
+    .pseudo p:last-child::first-letter{/*sonuncuyu seç ve ilk harfi seç*/
+        font-size: 50px;
+        color: red;
+    }
+
+    .pseudo p:first-child::first-line{
+        background-color: aqua;
+    }
+
+    .pseudo p:last-child::after{
+        content: "****";
+    }
+
+    ::selection{
+        background-color: black;/*ekrandaki nesneleri seçtiğimde ...*/
+    }
+</style>
+<body>
+    
+
+    <!-- PSEUDO CLASSES -->
+
+    <div class="links">
+        <a href="home.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="show-button">
+        Show button...
+        <br>
+        <button>Click</button>
+    </div>
+
+    <div class="pseudo">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, at?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, modi!</p>
+    </div>
+</body>
+</html>

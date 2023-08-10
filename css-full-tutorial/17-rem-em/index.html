@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Rem ve Em Birimleri</title>
+
+    <style>
+        html{
+            font-size: 16px;/*10px verirsem daha kolay rem em hesaplanır*/
+        }
+        .box-wrapper{
+            font-size: 30px;
+        }
+        .box{
+            font-size: 20px;
+        }
+        .box p{
+            font-size: 1.5em;/*paragrafa verilen font size box kapsayıcısından alır*/
+            margin-top: 2em;/*marginde kendi içindekine bakıyor*/
+        }
+
+        .box span{
+            font-size: 2rem;/*ana htmle bakar*/
+            margin-top: 2rem;
+            display: inline-block;
+        }
+
+        @media (max-width:768px){
+            html{
+                font-size: 28px;
+            }
+        }
+        @media (max-width:576px){
+            html{
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box-wrapper">
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam sint dolores incidunt et voluptatem quibusdam culpa aut at ipsa voluptas?</p>
+    
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, obcaecati!</span>
+        </div>
+    </div>
+</body>
+</html>

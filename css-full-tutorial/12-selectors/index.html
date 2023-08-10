@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container *{
+            color: red;
+            border: 1px solid blue;
+        }/*tarayıcıyı yorar mümkünse çok kullanma*/
+
+        /* id ye şekil vermek için # */
+
+        ul{
+            margin-left: 20px;
+            list-style: none;
+        }
+        ul li a{
+            text-decoration: none;
+            color: black;
+        }
+        /*ul + p{
+            color: pink;
+        }
+        ul den sonra gelen p etiketlerini alır
+        */
+
+        ul~p{
+            color: purple;
+        }/*ul den sonra gelen tüm p etiketlerini alır*/
+
+        .direkt-secici > p{/*sadece child ları seçer*/
+            color: red;
+        }
+        p[class="paragraph"]{/*class ı paragraph ise*/
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+           <a href="#">list 1</a> 
+        </li>
+        <li>list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+    </ul>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+         Eum debitis corrupti porro rerum iste libero fugiat cupiditate
+          illum blanditiis dolore maxime, excepturi tempore, odit optio 
+          laboriosam impedit, nesciunt obcaecati vel perferendis
+           molestias consequuntur sed aperiam repudiandae earum.
+            Ex numquam eum doloribus temporibus, sunt, porro ea 
+            sed repellat natus, dolor nulla libero sequi accusantium 
+            aut ut! At, odio dolores temporibus repellat vel maiores.
+             Optio quis sit minima suscipit, laudantium unde, recusandae
+              ex assumenda excepturi odit officia cumque voluptate
+               maxime dolorem, vel nesciunt! Veritatis perferendis, 
+               harum facere dolores nihil maiores voluptates dolorum
+                quidem commodi obcaecati vero maxime sit quam quae 
+                veniam corrupti.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Placeat, voluptate?</p>
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet.
+            <span>Lorem ipsum dolor sit amet.</span>
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet.
+            <i>Lorem ipsum dolor sit amet.</i>
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet.
+            <strong>Lorem ipsum dolor sit amet.</strong>
+        </p>
+    </div>
+    <div class="container" id="container"></div>
+
+    <div class="direkt-secici">
+        <h4>Direkt Seçici</h4>
+        <p>Lorem ipsum dolor sit amet.</p>
+
+        <div>
+            <p>Lorem ipsum dolor sit.</p>
+        </div>
+        <p class="paragraph">Lorem ipsum dolor sit.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+</head>
+<body style="margin-bottom: 500px;">
+
+    <h1>hello</h1>
+    
+
+    <div style="
+    display: flex;
+    
+    ">
+        <div style="
+            background-color: red;
+            flex:1;/*geri kalanını alır*/
+            ">kutu1</div>
+        <div style="
+        background-color: turquoise;
+        ">kutu2</div>
+        <div style="
+        background-color: greenyellow;
+        ">kutu3</div>
+    </div>
+
+
+    <div style="
+    display: flex;
+    margin-top: 20px;
+    ">
+        <div style="
+            background-color: red;
+            ">kutu1</div>
+        <div style="
+        background-color: turquoise;
+        flex:3;
+        ">kutu2</div>
+        <div style="
+        background-color: greenyellow;
+        flex:2;
+        ">kutu3</div>
+    </div>
+
+    <div style="
+    display: flex;
+    margin-top: 20px;
+    border:1px solid black;
+    column-gap: 10px;
+    ">
+        <div style="
+            background-color: red;
+            ">kutu1</div>
+        <div style="
+        background-color: turquoise;
+        ">kutu2</div>
+        <div style="
+        background-color: greenyellow;
+        ">kutu3</div>
+    </div>
+
+    <b style="margin-top: 20px;
+    display: inline-block;">
+   justify-content: space-between;
+    </b>
+    <div style="
+    display: flex;
+    justify-content: space-between;
+    border:1px solid black;
+    
+    ">
+        <div style="
+            background-color: red;
+            ">kutu1</div>
+        <div style="
+        background-color: turquoise;
+        ">kutu2</div>
+        <div style="
+        background-color: greenyellow;
+        ">kutu3</div>
+    </div>
+
+    <b style="margin-top: 20px;
+    display: inline-block;">
+   justify-content: space-around;
+    </b>
+    <div style="
+    display: flex;
+    justify-content: space-around;
+    border:1px solid black;
+    
+    ">
+        <div style="
+            background-color: red;
+            ">kutu1</div>
+        <div style="
+        background-color: turquoise;
+        ">kutu2</div>
+        <div style="
+        background-color: greenyellow;
+        ">kutu3</div>
+    </div>
+
+
+    <b style="margin-top: 20px;
+    display: inline-block;">
+   justify-content: space-evenly;
+    </b>
+    <div style="
+    display: flex;
+    justify-content: space-evenly;
+    border:1px solid black;
+    
+    ">
+        <div style="
+            background-color: red;
+            ">kutu1</div>
+        <div style="
+        background-color: turquoise;
+        ">kutu2</div>
+        <div style="
+        background-color: greenyellow;
+        ">kutu3</div>
+    </div>
+
+    <b style="margin-top: 20px;
+    display: inline-block;">
+   align items: center;
+    </b>
+    <div style="
+    display: flex;
+    align-items: center;
+    border:1px solid black;
+    height: 200px; /*height dan dolayı kutu aşağı doğru iner bunu önler*/
+    ">
+        <div style="
+            background-color: red;
+            ">kutu1</div>
+        <div style="
+        background-color: turquoise;
+        ">kutu2</div>
+        <div style="
+        background-color: greenyellow;
+        ">kutu3</div>
+    </div>
+
+    <b style="margin-top: 20px;
+    display: inline-block;">
+   align items: flex-start;
+    </b>
+    <div style="
+    display: flex;
+    align-items: flex-start;
+    border:1px solid black;
+    height: 200px; /*height dan dolayı kutu aşağı doğru iner bunu önler*/
+    ">
+        <div style="
+            background-color: red;
+            ">kutu1</div>
+        <div style="
+        background-color: turquoise;
+        ">kutu2</div>
+        <div style="
+        background-color: greenyellow;
+        ">kutu3</div>
+    </div>
+
+    <b style="margin-top: 20px;
+    display: inline-block;">
+   align items: flex-end;
+    </b>
+    <div style="
+    display: flex;
+    align-items: flex-end;
+    border:1px solid black;
+    height: 200px; /*height dan dolayı kutu aşağı doğru iner bunu önler*/
+    ">
+        <div style="
+            background-color: red;
+            flex: 1;
+            ">kutu1</div>
+        <div style="
+        background-color: turquoise;
+        flex: 1;
+        ">kutu2</div>
+        <div style="
+        background-color: greenyellow;
+        flex: 1;
+        ">kutu3</div>
+    </div>
+
+
+
+</body>
+</html>
+<!--dikeyde align items-->
+<!--justtify yatayda-->
+<!--justify flex özelliğidir. kutu aralarını oranlar-->
+<!--flex grid gibi tek tek girmeden hepsini bir araya getirir-->
+<!--flexfroggy oyunla öğrenmek için-->
